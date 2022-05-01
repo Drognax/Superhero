@@ -3,8 +3,8 @@ $(document).ready(function() {
 
         let personaje = document.getElementById('personaje').value;
 
-        if(isNaN(personaje) || personaje<1){
-            alert("¡Ingrese un número valido!");
+        if(isNaN(personaje) || personaje<1 ||personaje>732){
+            alert("¡Ingrese un número valido! Entre 1 y 732");
             
         }  
         else {
