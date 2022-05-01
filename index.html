@@ -6,66 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Lobster&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Bebas+Neue&family=Square+Peg&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/img/favicon.ico" rel="icon" type="image/ico">
+    
     <title>Super Hero</title>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand text-white" href="#"><img src="assets/img/sh2.png" height="50px" alt="" > SuperHero</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
             </div>
           </nav>
     </header>
 
-    <section>
+    <section id="buscadorHero">
         <div>
-            <img src="assets/img/sh1.jpg" alt="rickandmorty">
+            <img src="assets/img/sh1.jpg" alt="superhero">
             <h1>Encuentra tu personaje: </h1>
             <p>Ingresa un numero del personaje a buscar:</p>
-            <input type="text" id="personaje">
-            <button id="buscador">Buscar</button> 
-
+            <input type="text" id="personaje" placeholder="Ingresa un numero">
+            <button id="buscador" class="btn btn-warning">Buscar</button> 
+        </div>
+    </section>
+    <!-- Busqueda del Heroe -->
+    <section class="visually-hidden" id="contenidoHero">
+        <div class="row">
+          <div class="col-12 col-md-6">          
+          <div class="card mb-3 text-white bg-dark">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="..." class="card-img-top" alt="..." id="imageHero">
+              </div>
+              <div class="col-md-8 text-white bg-dark">
+                <div class="card-body text-white bg-dark">
+                  <h5 class="card-title" id="nombreHero"></h5>
+                <p class="card-text" id="heroConections"></p>
+                <p class="card-text" id="publicador"></p>
+              </div>
+              <ul class="list-group list-group-flush ">
+                <li class="list-group-item bg-secondary text-white" id="ocupation"></li>
+                <li class="list-group-item" id="firstAp"></li>
+                <li class="list-group-item" id="altura"></li>
+                <li class="list-group-item" id="peso"></li>
+                <li class="list-group-item" id="aliance"></li>
+                </div>
+              </div>
+            </div>
+          </div>        
+          <div class="col-12 col-md-6">
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+          </div>
         </div>
     </section>
 
-    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <footer class="bg-dark">
+        <p>E-camp 2022</p>
+        <img src="assets/img/logo ecamp.png" alt="logo ecamp" style="height: 100px;">
+    </footer>
+
+    
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

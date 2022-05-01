@@ -1,0 +1,25 @@
+body{
+ background-color: black;
+ color: white;
+}
+
+#buscadorHero{
+    text-align: center;
+    margin: 2em;
+    font-family: 'Arima Madurai';
+
+}
+
+#contenidoHero{
+    margin-left: 2em;
+    margin-right: 2em;
+    border: 2em;
+    font-family: 'Bebas Neue';
+    margin-bottom: 2em;
+
+}
+
+footer{
+    text-align: center;
+    padding-top: 2em;
+}
